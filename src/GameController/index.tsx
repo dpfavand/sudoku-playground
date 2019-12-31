@@ -9,6 +9,7 @@ import {
   Index
 } from '../grid';
 import NumberInput from '../NumberInput';
+import styles from './GameController.module.css';
 
 const GameController = () => {
   const [grid, setGrid] = useState<Grid>(emptyGrid);
@@ -32,16 +33,18 @@ const GameController = () => {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <p>Status: {invalid ? 'invalid' : 'ok'} </p>
-      <button onClick={startNewGame}>New Game</button>
+      <button onClick={startNewGame} className={styles.button}>
+        New Game
+      </button>
       <GridDisplay
         grid={grid}
         setActiveCell={setActiveCell}
         activeCell={activeCell}
       />
       <NumberInput setValue={setValue} />
-    </>
+    </div>
   );
 };
 
