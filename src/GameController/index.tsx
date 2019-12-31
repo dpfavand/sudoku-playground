@@ -18,7 +18,7 @@ const GameController = () => {
   );
 
   const startNewGame = () => {
-    const newGrid = seedGrid(10);
+    const newGrid = seedGrid(15);
     setGrid(newGrid);
   };
 
