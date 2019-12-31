@@ -1,0 +1,17 @@
+.cell {
+  min-width: 3rem;
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #666565;
+  cursor: pointer;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.active {
+  background-color: darkslateblue;
+}
